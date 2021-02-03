@@ -11,7 +11,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- <link rel="manifest" href="site.webmanifest"> -->
-    <link rel="shortcut icon" type="image/x-icon" href="{{asset('front/img/favicon.ico')}}">
+    <link rel="shortcut icon" type="image/x-icon" href="{{asset('asset/icon.png')}}">
 
     <!-- CSS here -->
     <link rel="stylesheet" href="{{asset('front/css/bootstrap.min.css')}}">
@@ -92,7 +92,7 @@
                         <div class="col-xl-10 col-lg-10 col-md-12 header-flex">
                             <!-- sticky -->
                             <div class="sticky-logo">
-                                <a href="index.html"><img src="{{asset('front/img/logo/logo.png')}}" alt=""></a>
+{{--                                <a href="index.html"><img src="{{asset('front/img/logo/logo.png')}}" alt=""></a>--}}
                             </div>
                             <!-- Main-menu -->
                             <div class="main-menu d-none d-md-block">
@@ -141,7 +141,7 @@
                         <div class="single-footer-caption">
                             <!-- logo -->
                             <div class="footer-logo">
-                                <a href="index.html"><img src="{{asset('front/img/logo/logo2_footer.png')}}" alt=""></a>
+{{--                                <a href="index.html"><img src="{{asset('front/img/logo/logo2_footer.png')}}" alt=""></a>--}}
                             </div>
                             <div class="footer-tittle">
                                 <div class="footer-pera">

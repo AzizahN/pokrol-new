@@ -35,7 +35,7 @@ Route::get('/', function () {
     return view('front.blog',compact('content'));
 });
 
-Route::get('/',[ClientController::class,''])->name('index');
+Route::get('/',[ClientController::class,'index'])->name('index');
 Route::get('/tausiyah',[ClientController::class,'tausiyah'])->name('tausiyah');
 Route::get('/blog',[ClientController::class,'blog'])->name('blog');
 Route::get('/event',[ClientController::class,'event'])->name('event');
