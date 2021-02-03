@@ -10,6 +10,7 @@ $user = auth()->user();
         </ul>
         <h1 class="font-weight-bold text-2xl text-white">{{ config('app.name', 'Laravel') }}</h1>
     </form>
+{{--    asdas--}}
     <ul class="navbar-nav navbar-right">
         <li class="dropdown"><a href="#" data-turbolinks="false" data-toggle="dropdown" class="nav-link dropdown-toggle nav-link-lg nav-link-user">
             @if (!is_null($user))

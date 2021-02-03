@@ -195,6 +195,9 @@
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="2" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
   <component name="WindowStateProjectService">
     <state x="515" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1611929106711">
       <screen x="0" y="0" width="1536" height="824" />
