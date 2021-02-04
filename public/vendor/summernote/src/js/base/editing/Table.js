@@ -300,7 +300,7 @@ export default class Table {
   }
 
   /**
-   * Add a new row
+   * Add a tausiyah row
    *
    * @param {WrappedRange} rng
    * @param {String} position (top/bottom)
@@ -355,7 +355,7 @@ export default class Table {
   }
 
   /**
-   * Add a new col
+   * Add a tausiyah col
    *
    * @param {WrappedRange} rng
    * @param {String} position (left/right)

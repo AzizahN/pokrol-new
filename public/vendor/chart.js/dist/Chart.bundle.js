@@ -731,11 +731,11 @@ for (var func in conversions) {
   // export rgb2hsl and ["rgb"]["hsl"]
   convert[from] = convert[from] || {};
 
-  convert[from][to] = convert[func] = (function(func) { 
+  convert[from][to] = convert[func] = (function(func) {
     return function(arg) {
       if (typeof arg == "number")
         arg = Array.prototype.slice.call(arguments);
-      
+
       var val = conversions[func](arg);
       if (typeof val == "string" || val === undefined)
         return val; // keyword
@@ -763,12 +763,12 @@ Converter.prototype.routeSpace = function(space, args) {
    }
    // color.rgb(10, 10, 10)
    if (typeof values == "number") {
-      values = Array.prototype.slice.call(args);        
+      values = Array.prototype.slice.call(args);
    }
 
    return this.setValues(space, values);
 };
-  
+
 /* Set the values for a space, invalidating cache */
 Converter.prototype.setValues = function(space, values) {
    this.space = space;
@@ -1100,7 +1100,7 @@ function getAlpha(string) {
 // generators
 function hexString(rgba, a) {
    var a = (a !== undefined && rgba.length === 3) ? a : rgba[3];
-   return "#" + hexDouble(rgba[0]) 
+   return "#" + hexDouble(rgba[0])
               + hexDouble(rgba[1])
               + hexDouble(rgba[2])
               + (
@@ -2657,9 +2657,9 @@ var helpers_options = {
 	 * Evaluates the given `inputs` sequentially and returns the first defined value.
 	 * @param {Array} inputs - An array of values, falling back to the last value.
 	 * @param {object} [context] - If defined and the current value is a function, the value
-	 * is called with `context` as first argument and the result becomes the new input.
+	 * is called with `context` as first argument and the result becomes the tausiyah input.
 	 * @param {number} [index] - If defined and the current value is an array, the value
-	 * at `index` become the new input.
+	 * at `index` become the tausiyah input.
 	 * @since 2.7.0
 	 */
 	resolve: function(inputs, context, index) {
@@ -6251,7 +6251,7 @@ var core_layouts = {
 	 * Sets (or updates) options on the given `item`.
 	 * @param {Chart} chart - the chart in which the item lives (or will be added to)
 	 * @param {ILayoutItem} item - the item to configure with the given options
-	 * @param {object} options - the new item options.
+	 * @param {object} options - the tausiyah item options.
 	 */
 	configure: function(chart, item, options) {
 		var props = ['fullWidth', 'position', 'weight'];
@@ -7243,8 +7243,8 @@ var core_plugins = {
 };
 
 var core_scaleService = {
-	// Scale registration object. Extensions can register new scale types (such as log or DB scales) and then
-	// use the new chart options to grab the correct scale
+	// Scale registration object. Extensions can register tausiyah scale types (such as log or DB scales) and then
+	// use the tausiyah chart options to grab the correct scale
 	constructors: {},
 	// Use a registration function so that we can move to an ES6 map when we no longer need to support
 	// old browsers
@@ -8325,7 +8325,7 @@ function mergeScaleConfig(/* config objects ... */) {
 					}
 
 					if (!target[key][i].type || (scale.type && scale.type !== target[key][i].type)) {
-						// new/untyped scale or type changed: let's apply the new defaults
+						// tausiyah/untyped scale or type changed: let's apply the tausiyah defaults
 						// then merge source scale to correctly overwrite the defaults.
 						helpers$1.merge(target[key][i], [core_scaleService.getScaleDefaults(type), scale]);
 					} else {
@@ -8730,7 +8730,7 @@ helpers$1.extend(Chart.prototype, /** @lends Chart */ {
 		// In case the entire data object changed
 		me.tooltip._data = me.data;
 
-		// Make sure dataset controllers are updated and new controllers are reset
+		// Make sure dataset controllers are updated and tausiyah controllers are reset
 		var newControllers = me.buildOrUpdateControllers();
 
 		// Make sure all dataset controllers have correct meta data counts
@@ -8740,7 +8740,7 @@ helpers$1.extend(Chart.prototype, /** @lends Chart */ {
 
 		me.updateLayout();
 
-		// Can only reset the new controllers after the scales have been updated
+		// Can only reset the tausiyah controllers after the scales have been updated
 		if (me.options.animation && me.options.animation.duration) {
 			helpers$1.each(newControllers, function(controller) {
 				controller.reset();
@@ -12410,7 +12410,7 @@ var scale_radialLinear = scale_linearbase.extend({
 	},
 
 	/**
-	 * Set radius reductions and determine new radius and center point
+	 * Set radius reductions and determine tausiyah radius and center point
 	 * @private
 	 */
 	setReductions: function(largestPossibleRadius, furthestLimits, furthestAngles) {
@@ -13562,7 +13562,7 @@ var moment = createCommonjsModule(function (module, exports) {
         if (!this.isValid()) {
             this._d = new Date(NaN);
         }
-        // Prevent infinite loop in case updateOffset creates new moment
+        // Prevent infinite loop in case updateOffset creates tausiyah moment
         // objects.
         if (updateInProgress === false) {
             updateInProgress = true;
@@ -15105,7 +15105,7 @@ var moment = createCommonjsModule(function (module, exports) {
 
     // Setting the hour should keep the time, because the user explicitly
     // specified which hour they want. So trying to maintain the same hour (in
-    // a new timezone) makes sense. Adding/subtracting hours does not follow
+    // a tausiyah timezone) makes sense. Adding/subtracting hours does not follow
     // this rule.
     var getSetHour = makeGetSet('Hours', true);
 
@@ -15216,7 +15216,7 @@ var moment = createCommonjsModule(function (module, exports) {
                 deprecateSimple('defineLocaleOverride',
                         'use moment.updateLocale(localeName, config) to change ' +
                         'an existing locale. moment.defineLocale(localeName, ' +
-                        'config) should only be used for creating a new locale ' +
+                        'config) should only be used for creating a tausiyah locale ' +
                         'See http://momentjs.com/guides/#/warnings/define-locale/ for more info.');
                 parentConfig = locales[name]._config;
             } else if (config.parentLocale != null) {
@@ -15738,7 +15738,7 @@ var moment = createCommonjsModule(function (module, exports) {
         config._a = [];
         getParsingFlags(config).empty = true;
 
-        // This array is used to make a Date, either with `new Date` or `Date.UTC`
+        // This array is used to make a Date, either with `tausiyah Date` or `Date.UTC`
         var string = '' + config._i,
             i, parsedInput, tokens, token, skipped,
             stringLength = string.length,
@@ -16669,7 +16669,7 @@ var moment = createCommonjsModule(function (module, exports) {
 
     /**
      * Return a human readable representation of a moment that can
-     * also be evaluated to get a new moment which is the same
+     * also be evaluated to get a tausiyah moment which is the same
      *
      * @link https://nodejs.org/dist/latest/docs/api/util.html#util_custom_inspect_function_on_objects
      */
@@ -16916,7 +16916,7 @@ var moment = createCommonjsModule(function (module, exports) {
     }
 
     function toJSON () {
-        // new Date(NaN).toJSON() === null
+        // tausiyah Date(NaN).toJSON() === null
         return this.isValid() ? this.toISOString() : null;
     }
 
@@ -18576,7 +18576,7 @@ var Legend = core_element.extend({
 					var boxWidth = getBoxWidth(labelOpts, fontSize);
 					var itemWidth = boxWidth + (fontSize / 2) + ctx.measureText(legendItem.text).width;
 
-					// If too tall, go to new column
+					// If too tall, go to tausiyah column
 					if (i > 0 && currentColHeight + itemHeight > minSize.height - vPadding) {
 						totalWidth += currentColWidth + labelOpts.padding;
 						columnWidths.push(currentColWidth); // previous column width
@@ -19259,8 +19259,8 @@ core_controller.layoutService = core_controller.layouts;
 core_controller.LinearScaleBase = scale_linearbase;
 
 /**
- * Provided for backward compatibility, instead we should create a new Chart
- * by setting the type in the config (`new Chart(id, {type: '{chart-type}'}`).
+ * Provided for backward compatibility, instead we should create a tausiyah Chart
+ * by setting the type in the config (`tausiyah Chart(id, {type: '{chart-type}'}`).
  * @deprecated since version 2.8.0
  * @todo remove at version 3
  */

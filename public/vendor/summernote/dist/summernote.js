@@ -331,7 +331,7 @@
               edit: 'Edit',
               textToDisplay: 'Text to display',
               url: 'To what URL should this link go?',
-              openInNewWindow: 'Open in new window'
+              openInNewWindow: 'Open in tausiyah window'
           },
           table: {
               table: 'Table',
@@ -1089,7 +1089,7 @@
       return null;
   }
   /**
-   * returns new array of ancestor nodes (until predicate hit).
+   * returns tausiyah array of ancestor nodes (until predicate hit).
    *
    * @param {Node} node
    * @param {Function} [optional] pred - predicate function
@@ -1183,7 +1183,7 @@
       return descendants;
   }
   /**
-   * wrap node with new tag.
+   * wrap node with tausiyah tag.
    *
    * @param {Node} node
    * @param {Node} tagName of wrapper
@@ -1680,7 +1680,7 @@
    *
    * @param {Node} node
    * @param {String} nodeName
-   * @return {Node} - new node
+   * @return {Node} - tausiyah node
    */
   function replace(node, nodeName) {
       if (node.nodeName.toUpperCase() === nodeName.toUpperCase()) {
@@ -2434,7 +2434,7 @@
           var nodes = rng.nodes(null, {
               fullyContains: true
           });
-          // find new cursor point
+          // find tausiyah cursor point
           var point = dom.prevPointUntil(rng.getStartPoint(), function (point) {
               return !lists.contains(nodes, point.node);
           });
@@ -3007,7 +3007,7 @@
           if (this.stack.length > this.stackOffset) {
               this.stack = this.stack.slice(0, this.stackOffset);
           }
-          // Create new snapshot and push it to the end
+          // Create tausiyah snapshot and push it to the end
           this.stack.push(this.makeSnapshot());
       };
       return History;
@@ -3370,7 +3370,7 @@
        * @method appendToPrevious
        *
        * Appends list to previous list item, if
-       * none exist it wraps the list in a new list item.
+       * none exist it wraps the list in a tausiyah list item.
        *
        * @param {HTMLNode} ListItem
        * @return {HTMLNode}
@@ -3444,9 +3444,9 @@
        * @param {WrappedRange} rng Can be used in unit tests to "mock" the range
        *
        * blockquoteBreakingLevel
-       *   0 - No break, the new paragraph remains inside the quote
+       *   0 - No break, the tausiyah paragraph remains inside the quote
        *   1 - Break the first blockquote in the ancestors list
-       *   2 - Break all blockquotes, so that the new paragraph is not quoted (this is the default)
+       *   2 - Break all blockquotes, so that the tausiyah paragraph is not quoted (this is the default)
        */
       Typing.prototype.insertParagraph = function (editable, rng) {
           rng = rng || range.create(editable);
@@ -3477,7 +3477,7 @@
                       // We're inside a blockquote and options ask us to break it
                       nextPara = $$1(dom.emptyPara)[0];
                       // If the split is right before a <br>, remove it so that there's no "empty line"
-                      // after the split in the new blockquote created
+                      // after the split in the tausiyah blockquote created
                       if (dom.isRightEdgePoint(rng.getStartPoint()) && dom.isBR(rng.sc.nextSibling)) {
                           $$1(rng.sc.nextSibling).remove();
                       }
@@ -3799,7 +3799,7 @@
           }
       };
       /**
-       * Add a new row
+       * Add a tausiyah row
        *
        * @param {WrappedRange} rng
        * @param {String} position (top/bottom)
@@ -3849,7 +3849,7 @@
           }
       };
       /**
-       * Add a new col
+       * Add a tausiyah col
        *
        * @param {WrappedRange} rng
        * @param {String} position (left/right)
@@ -6530,7 +6530,7 @@
               '</div>',
               !this.options.disableLinkTarget
                   ? $$1('<div/>').append(this.ui.checkbox({
-                      className: 'sn-checkbox-open-in-new-window',
+                      className: 'sn-checkbox-open-in-tausiyah-window',
                       text: this.lang.link.openInNewWindow,
                       checked: true
                   }).render()).html()
@@ -6577,7 +6577,7 @@
               var $linkUrl = _this.$dialog.find('.note-link-url');
               var $linkBtn = _this.$dialog.find('.note-link-btn');
               var $openInNewWindow = _this.$dialog
-                  .find('.sn-checkbox-open-in-new-window input[type=checkbox]');
+                  .find('.sn-checkbox-open-in-tausiyah-window input[type=checkbox]');
               _this.ui.onDialogShown(_this.$dialog, function () {
                   _this.context.triggerEvent('dialog.shown');
                   // If no url was given and given text is valid URL then copy that into URL Field

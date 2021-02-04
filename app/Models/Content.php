@@ -101,4 +101,8 @@ class Content extends Model
                     ->orWhere('created_at', 'like', '%' . $query . '%');
             });
     }
+    public function comments()
+    {
+        return $this->hasMany('App\Models\Comment');
+    }
 }

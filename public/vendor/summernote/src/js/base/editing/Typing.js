@@ -38,9 +38,9 @@ export default class Typing {
    * @param {WrappedRange} rng Can be used in unit tests to "mock" the range
    *
    * blockquoteBreakingLevel
-   *   0 - No break, the new paragraph remains inside the quote
+   *   0 - No break, the tausiyah paragraph remains inside the quote
    *   1 - Break the first blockquote in the ancestors list
-   *   2 - Break all blockquotes, so that the new paragraph is not quoted (this is the default)
+   *   2 - Break all blockquotes, so that the tausiyah paragraph is not quoted (this is the default)
    */
   insertParagraph(editable, rng) {
     rng = rng || range.create(editable);
@@ -74,7 +74,7 @@ export default class Typing {
           // We're inside a blockquote and options ask us to break it
           nextPara = $(dom.emptyPara)[0];
           // If the split is right before a <br>, remove it so that there's no "empty line"
-          // after the split in the new blockquote created
+          // after the split in the tausiyah blockquote created
           if (dom.isRightEdgePoint(rng.getStartPoint()) && dom.isBR(rng.sc.nextSibling)) {
             $(rng.sc.nextSibling).remove();
           }

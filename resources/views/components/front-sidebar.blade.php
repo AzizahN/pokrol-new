@@ -31,20 +31,20 @@
         </ul>
     </aside>
 
-    <aside class="single_sidebar_widget popular_post_widget">
-        <h3 class="widget_title">Post Terbaru</h3>
-        <div class="media post_item">
-            @foreach(Helper::getRecentPost() as $c)
-            <img src="{{asset('storage/content/'.$c->thumbnail)}}" alt="post" style="max-height: 100px">
-            <div class="media-body">
-                <a href="single-blog.html">
-                    <h3>{{$c->title}}</h3>
-                </a>
-                <p>{{$c->created_at->format('d M Y')}}</p>
-            </div>
-            @endforeach
-        </div>
-    </aside>
+{{--    <aside class="single_sidebar_widget popular_post_widget">--}}
+{{--        <h3 class="widget_title">Post Terbaru</h3>--}}
+{{--        <div class="media post_item">--}}
+{{--            @foreach(Helper::getRecentPost() as $c)--}}
+{{--            <img src="{{asset('storage/content/'.$c->thumbnail)}}" alt="post" style="max-height: 100px">--}}
+{{--            <div class="media-body">--}}
+{{--                <a href="single-blog.html">--}}
+{{--                    <h3>{{$c->title}}</h3>--}}
+{{--                </a>--}}
+{{--                <p>{{$c->created_at->format('d M Y')}}</p>--}}
+{{--            </div>--}}
+{{--            @endforeach--}}
+{{--        </div>--}}
+{{--    </aside>--}}
 {{--    <aside class="single_sidebar_widget tag_cloud_widget">--}}
 {{--        <h4 class="widget_title">Tag</h4>--}}
 {{--        <ul class="list">--}}

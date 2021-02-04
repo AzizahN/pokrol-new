@@ -266,7 +266,7 @@ function singleChildAncestor(node, pred) {
 }
 
 /**
- * returns new array of ancestor nodes (until predicate hit).
+ * returns tausiyah array of ancestor nodes (until predicate hit).
  *
  * @param {Node} node
  * @param {Function} [optional] pred - predicate function
@@ -367,7 +367,7 @@ function listDescendant(node, pred) {
 }
 
 /**
- * wrap node with new tag.
+ * wrap node with tausiyah tag.
  *
  * @param {Node} node
  * @param {Node} tagName of wrapper
@@ -916,7 +916,7 @@ function removeWhile(node, pred) {
  *
  * @param {Node} node
  * @param {String} nodeName
- * @return {Node} - new node
+ * @return {Node} - tausiyah node
  */
 function replace(node, nodeName) {
   if (node.nodeName.toUpperCase() === nodeName.toUpperCase()) {

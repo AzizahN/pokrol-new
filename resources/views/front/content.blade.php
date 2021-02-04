@@ -38,7 +38,7 @@
 
                         @endforeach
 
-
+{{--                        {{$contents->links()}}--}}
                         <nav class="blog-pagination justify-content-center d-flex">
                             <ul class="pagination">
                                 <li class="page-item">

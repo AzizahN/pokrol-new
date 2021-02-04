@@ -101,7 +101,7 @@
 
         <x-slot name="content">
             <div>
-                {{ __('Please copy your new API token. For your security, it won\'t be shown again.') }}
+                {{ __('Please copy your tausiyah API token. For your security, it won\'t be shown again.') }}
             </div>
 
             <div class="mt-4 bg-gray-100 px-4 py-2 rounded font-mono text-sm text-gray-500">

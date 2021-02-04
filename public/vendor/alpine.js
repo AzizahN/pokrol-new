@@ -557,7 +557,7 @@
   }
 
   function getIterationScopeVariables(iteratorNames, item, index, items, extraVars) {
-    // We must create a new object, so each iteration has a new scope
+    // We must create a tausiyah object, so each iteration has a tausiyah scope
     let scopeVariables = extraVars ? _objectSpread2({}, extraVars) : {};
     scopeVariables[iteratorNames.item] = item;
     if (iteratorNames.index) scopeVariables[iteratorNames.index] = index;
@@ -1014,7 +1014,7 @@
   /**
    * Unwrap property descriptors will set value on original descriptor
    * We only need to unwrap if value is specified
-   * @param descriptor external descrpitor provided to define new property on original value
+   * @param descriptor external descrpitor provided to define tausiyah property on original value
    */
   function unwrapDescriptor(descriptor) {
       if (hasOwnProperty.call(descriptor, 'value')) {
@@ -1058,8 +1058,8 @@
               valueMutated(originalTarget, key);
           }
           else if (key === 'length' && isArray(originalTarget)) {
-              // fix for issue #236: push will add the new index, and by the time length
-              // is updated, the internal length is already equal to the new length value
+              // fix for issue #236: push will add the tausiyah index, and by the time length
+              // is updated, the internal length is already equal to the tausiyah length value
               // therefore, the oldValue is equal to the value. This is the forking logic
               // to support this use case.
               valueMutated(originalTarget, key);
@@ -1451,7 +1451,7 @@
       } // Register all our listeners and set all our attribute bindings.
 
 
-      this.initializeElements(this.$el); // Use mutation observer to detect new elements being added within this component at run-time.
+      this.initializeElements(this.$el); // Use mutation observer to detect tausiyah elements being added within this component at run-time.
       // Alpine's just so darn flexible amirite?
 
       this.listenForNewElementsToInitialize();

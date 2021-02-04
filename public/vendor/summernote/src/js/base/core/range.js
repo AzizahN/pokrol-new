@@ -416,7 +416,7 @@ class WrappedRange {
       fullyContains: true,
     });
 
-    // find new cursor point
+    // find tausiyah cursor point
     const point = dom.prevPointUntil(rng.getStartPoint(), function(point) {
       return !lists.contains(nodes, point.node);
     });

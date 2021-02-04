@@ -30,7 +30,7 @@ export default class LinkDialog {
       '</div>',
       !this.options.disableLinkTarget
         ? $('<div/>').append(this.ui.checkbox({
-          className: 'sn-checkbox-open-in-new-window',
+          className: 'sn-checkbox-open-in-tausiyah-window',
           text: this.lang.link.openInNewWindow,
           checked: true,
         }).render()).html()
@@ -82,7 +82,7 @@ export default class LinkDialog {
       const $linkUrl = this.$dialog.find('.note-link-url');
       const $linkBtn = this.$dialog.find('.note-link-btn');
       const $openInNewWindow = this.$dialog
-        .find('.sn-checkbox-open-in-new-window input[type=checkbox]');
+        .find('.sn-checkbox-open-in-tausiyah-window input[type=checkbox]');
 
       this.ui.onDialogShown(this.$dialog, () => {
         this.context.triggerEvent('dialog.shown');

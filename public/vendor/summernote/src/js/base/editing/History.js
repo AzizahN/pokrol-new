@@ -114,7 +114,7 @@ export default class History {
       this.stack = this.stack.slice(0, this.stackOffset);
     }
 
-    // Create new snapshot and push it to the end
+    // Create tausiyah snapshot and push it to the end
     this.stack.push(this.makeSnapshot());
   }
 }

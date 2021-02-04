@@ -3,12 +3,15 @@
 namespace App\Http\Controllers;
 
 use App\Models\Content;
+use App\Models\Tag;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class ClientController extends Controller
 {
     public function index(){
-        return view('front.index');
+        $contents=Content::whereStatus('accepted')->whereType(1)->take(3)->get();
+        return view('front.index', compact('contents')); //
     }
 
     public function tausiyah(){
@@ -16,7 +19,7 @@ class ClientController extends Controller
         return view('front.content',compact('contents'));
     }
     public function blog(){
-        $contents=Content::whereStatus('accepted')->whereType(1)->get();
+        $contents=Content::whereStatus('accepted')->whereType(1)->orderBy('id', 'desc')->get();
         return view('front.content',compact('contents'));
     }
     public function event(){
@@ -27,8 +30,14 @@ class ClientController extends Controller
 
     }
     public function detail($slug){
-        $content=Content::whereSlug($slug)->whereStatus('accepted')->firstOrFail();
-        return view('front.detail',compact('content'));
+        $content = Content::whereSlug($slug)->whereStatus('accepted')->firstOrFail();
+        $blogs = Content::whereStatus('accepted')->orderBy('id', 'desc')->whereType(1)->take(3)->get();
+        $tags = Tag::all();
+        return view('front.detail',compact('content','tags', 'blogs'));
+    }
+
+    public function comment(Request $request,$id){
+        $data=$request->all();
     }
 
 

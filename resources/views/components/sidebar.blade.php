@@ -21,10 +21,10 @@ $links = [
     [
         "href" => [
             [
-                "section_text" => "Berita",
+                "section_text" => "Tausiyah",
                 "section_list" => [
-                    ["href" => "admin.news.index", "text" => "Data Berita"],
-                    ["href" => "admin.news.create", "text" => "Buat Berita"]
+                    ["href" => "admin.news.index", "text" => "Data Tausiyah"],
+                    ["href" => "admin.news.create", "text" => "Buat Tausiyah"]
                 ]
             ],
             [

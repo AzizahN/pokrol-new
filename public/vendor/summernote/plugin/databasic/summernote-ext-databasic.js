@@ -204,7 +204,7 @@
           ui.hideDialog(self.$dialog);
           context.invoke('editor.restoreRange');
 
-          // insert a new node
+          // insert a tausiyah node
           if (newNode) {
             self.createNode(info);
           }

@@ -99,7 +99,7 @@ class Main extends Component
                     "data" => array_to_object([
                         'href' => [
                             'create_new' => route('admin.news.create'),
-                            'create_new_text' => 'Buat Berita Baru',
+                            'create_new_text' => 'Buat Tausiyah Baru',
                             'export' => '#',
                             'export_text' => 'Export'
                         ]

@@ -10,18 +10,18 @@ class NewController extends Controller
 {
     public function index ()
     {
-        return view('pages.new.index', [
+        return view('pages.tausiyah.index', [
             'content' => Content::class
         ]);
     }
 
     public function create()
     {
-        return view('pages.new.create');
+        return view('pages.tausiyah.create');
     }
 
     public function edit($id)
     {
-        return view('pages.new.edit');
+        return view('pages.tausiyah.edit');
     }
 }

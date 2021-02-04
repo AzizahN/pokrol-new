@@ -11,7 +11,7 @@ class NotifyMessage extends Component
     public $message;
 
     /**
-     * Create a new component instance.
+     * Create a tausiyah component instance.
      *
      * @return void
      */

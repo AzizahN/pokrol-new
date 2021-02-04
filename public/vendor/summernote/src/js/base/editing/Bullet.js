@@ -242,7 +242,7 @@ export default class Bullet {
    * @method appendToPrevious
    *
    * Appends list to previous list item, if
-   * none exist it wraps the list in a new list item.
+   * none exist it wraps the list in a tausiyah list item.
    *
    * @param {HTMLNode} ListItem
    * @return {HTMLNode}

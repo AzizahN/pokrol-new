@@ -8,6 +8,7 @@ use App\Http\Controllers\Admin\NewController;
 use App\Http\Controllers\Admin\TagController;
 use App\Http\Controllers\Admin\UserController;
 use App\Http\Controllers\ClientController;
+use App\Http\Controllers\CommentController;
 use Illuminate\Support\Facades\Route;
 use Laravel\Jetstream\Http\Controllers\CurrentTeamController;
 use Laravel\Jetstream\Http\Controllers\Livewire\ApiTokenController;
@@ -41,6 +42,8 @@ Route::get('/blog',[ClientController::class,'blog'])->name('blog');
 Route::get('/event',[ClientController::class,'event'])->name('event');
 Route::get('/about',[ClientController::class,'about'])->name('about');
 Route::get('/{slug}',[ClientController::class,'detail'])->name('detail');
+Route::post('/{id}',[CommentController::class,'store'])->name('comment-store');
+
 
 Route::name('admin.')->prefix('admin')->middleware(['auth:sanctum','web', 'verified'])->group(function() {
     Route::view('/dashboard', "dashboard")->name('dashboard');
