@@ -11,5 +11,6 @@
 
     <div>
         <livewire:content-form action="create" :type="3"/>
+{{--        {{$type}}--}}
     </div>
 </x-app-layout>

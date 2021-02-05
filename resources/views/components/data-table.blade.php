@@ -4,9 +4,11 @@
             <a href="{{ $data->href->create_new }}" class="-ml- btn btn-primary shadow-none">
                 <span class="fas fa-plus"></span> {{ $data->href->create_new_text }}
             </a>
+            @isset($data->href->export)
             <a href="{{ $data->href->export }}" class="ml-2 btn btn-success shadow-none">
                 <span class="fas fa-file-export"></span> {{ $data->href->export_text }}
             </a>
+            @endisset
         </div>
 
         <div class="row mb-4">

@@ -22,7 +22,11 @@
                                 <a class="d-inline-block" href="{{route('detail',$c->slug)}}">
                                     <h2>{{$c->title}}</h2>
                                 </a>
-                                <p>{!! Str::limit($c->contents, 800, '') !!}</p>
+                                @if(strlen($c->contents) > 800)
+                                    <p>{!! Str::limit($c->contents, 800, '') !!}...(<a href="{{route('detail',$c->slug)}}">Baca Selengkapnya</a>)</p>
+                                @else
+                                    <p>{{$c->contents}}</p>
+                                @endif
                                 <ul class="blog-info-link">
                                     <li><a href="#"><i class="fa fa-user"></i>
                                             -
@@ -31,7 +35,7 @@
                                             @endforeach
 
                                         </a></li>
-                                    <li><a href="#"><i class="fa fa-comments"></i> 03 Comments</a></li>
+                                    <li><a href="#"><i class="fa fa-comments"></i> {{$c->comments->count()}} Komentar</a></li>
                                 </ul>
                             </div>
                         </article>

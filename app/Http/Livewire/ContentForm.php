@@ -71,12 +71,13 @@ class ContentForm extends Component
 
     public function create()
     {
+//        dd($this->type);
         $this->resetErrorBag();
         $this->validate();
 
         $this->data['slug'] = Str::slug($this->data['title']);
         $this->data['user_id'] = Auth::id();
-        $this->data['type'] = 1;
+        $this->data['type'] = $this->type;
 
         if ($this->file->temporaryUrl() == null) {
             sleep(3);
@@ -98,8 +99,13 @@ class ContentForm extends Component
             'icon' => 'success',
             'title' => 'Berhasil menambahkan tulisan',
         ]);
-
-        $this->emit('redirect');
+        if ($this->type == 1){
+            return redirect(route('admin.blog.index'));
+        } elseif ($this->type == 2){
+            return redirect(route('admin.event.index'));
+        }else{
+            return redirect(route('admin.news.index'));
+        }
 
     }
 

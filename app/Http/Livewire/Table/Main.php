@@ -63,8 +63,8 @@ class Main extends Component
                         'href' => [
                             'create_new' => route('admin.blog.create'),
                             'create_new_text' => 'Buat Blog Baru',
-                            'export' => '#',
-                            'export_text' => 'Export'
+//                            'export' => '#',
+//                            'export_text' => 'Export'
                         ]
                     ])
                 ];
@@ -82,8 +82,8 @@ class Main extends Component
                         'href' => [
                             'create_new' => route('admin.event.create'),
                             'create_new_text' => 'Buat Event Baru',
-                            'export' => '#',
-                            'export_text' => 'Export'
+//                            'export' => '#',
+//                            'export_text' => 'Export'
                         ]
                     ])
                 ];
@@ -100,8 +100,8 @@ class Main extends Component
                         'href' => [
                             'create_new' => route('admin.news.create'),
                             'create_new_text' => 'Buat Tausiyah Baru',
-                            'export' => '#',
-                            'export_text' => 'Export'
+//                            'export' => '#',
+//                            'export_text' => 'Export'
                         ]
                     ])
                 ];

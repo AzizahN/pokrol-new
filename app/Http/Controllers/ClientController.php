@@ -15,7 +15,7 @@ class ClientController extends Controller
     }
 
     public function tausiyah(){
-        $contents=Content::whereStatus('accepted')->whereType(2)->get();
+        $contents=Content::whereStatus('accepted')->whereType(3)->get();
         return view('front.content',compact('contents'));
     }
     public function blog(){
@@ -23,8 +23,8 @@ class ClientController extends Controller
         return view('front.content',compact('contents'));
     }
     public function event(){
-        $contents=Content::whereStatus('accepted')->whereType(3)->get();
-        return view('front.content',compact('contents'));
+        $contents=Content::whereStatus('accepted')->whereType(2)->get();
+        return view('front.event',compact('contents'));
     }
     public function about(){
 
