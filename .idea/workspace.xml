@@ -19,17 +19,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6bd14425-d709-4013-b0cd-70d5e3ac331f" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ClientController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ClientController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Livewire/ContentForm.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Livewire/ContentForm.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Livewire/Table/Main.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Livewire/Table/Main.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/components/data-table.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/components/data-table.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/front/content.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/front/content.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/front/event.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/front/event.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/front/tausiyah.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/pages/tausiyah/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pages/tausiyah/create.blade.php" afterDir="false" />
-    </list>
+    <list default="true" id="6bd14425-d709-4013-b0cd-70d5e3ac331f" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -180,10 +170,13 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/public/asset" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
     <property name="vue.rearranger.settings.migration" value="true" />
@@ -220,6 +213,7 @@
       <workItem from="1612410224837" duration="15243000" />
       <workItem from="1612488550404" duration="6991000" />
       <workItem from="1612500546465" duration="2610000" />
+      <workItem from="1612508502222" duration="5784000" />
     </task>
     <servers />
   </component>
@@ -255,14 +249,20 @@
       <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state x="199" y="14" key="SettingsEditor/0.0.1366.738@0.0.1366.738" timestamp="1612492517634" />
-    <state x="393" y="109" width="579" height="520" key="find.popup" timestamp="1612425646579">
-      <screen x="0" y="0" width="1366" height="738" />
+    <state x="442" y="128" width="652" height="609" key="find.popup" timestamp="1612514205916">
+      <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state x="393" y="109" width="579" height="520" key="find.popup/0.0.1366.738@0.0.1366.738" timestamp="1612425646579" />
-    <state x="346" y="59" width="672" height="678" key="search.everywhere.popup" timestamp="1612424100861">
-      <screen x="0" y="0" width="1366" height="738" />
+    <state x="442" y="128" width="652" height="609" key="find.popup/0.0.1536.864@0.0.1536.864" timestamp="1612514205916" />
+    <state x="425" y="197" key="run.anything.popup" timestamp="1612513674086">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="425" y="197" key="run.anything.popup/0.0.1536.864@0.0.1536.864" timestamp="1612513674086" />
+    <state x="389" y="69" width="756" height="794" key="search.everywhere.popup" timestamp="1612509453952">
+      <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state x="346" y="59" width="672" height="678" key="search.everywhere.popup/0.0.1366.738@0.0.1366.738" timestamp="1612424100861" />
+    <state x="389" y="69" width="756" height="794" key="search.everywhere.popup/0.0.1536.864@0.0.1536.864" timestamp="1612509453952" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

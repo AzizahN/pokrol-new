@@ -185,7 +185,6 @@
                                         <li><a href="{{route('blog')}}">Blog</a></li>
                                         <li><a href="{{route('tausiyah')}}">Tausiyah</a></li>
                                         <li><a href="{{route('event')}}">Event</a></li>
-                                        <li><a href="{{route('about')}}">Kontak</a></li>
                                         @auth
                                             <li>
                                                 <a href="{{ url('/dashboard') }}">Dashboard</a>

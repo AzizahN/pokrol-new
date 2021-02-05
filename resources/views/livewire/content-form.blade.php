@@ -12,12 +12,33 @@
             </textarea>
         </div>
 
+{{--        <div class="form-group col-span-6 sm:col-span-5" wire:ignore>--}}
+{{--            <label for="name">{{__('Tag Tulisan')}}</label>--}}
+{{--            <select id="tags" class="form-control select2" multiple="" required> //multiol--}}
+{{--                {{$tags}}--}}
+{{--                @foreach($tags as $t)--}}
+{{--                    <option value="{{$t->id}}"--}}
+{{--                    @if($action=="update")--}}
+{{--                        @foreach($tag as $t1)--}}
+{{--                            {{($t->id==$t1) ? "selected":""}}--}}
+{{--                        @endforeach--}}
+{{--                    @endif >{{$t->tag}}--}}
+{{--                    </option>--}}
+{{--                @endforeach--}}
+{{--            </select>--}}
+{{--        </div>--}}
+
         <div class="form-group col-span-6 sm:col-span-5" wire:ignore>
             <label for="name">{{__('Tag Tulisan')}}</label>
-            <select id="tags" class="form-control select2" multiple="" required>    //multiol
+            <select id="tags" class="form-control select2" multiple="" required>
                 @foreach($tags as $t)
-                    <option
-                        value="{{$t->id}}" @if($action=="update") @foreach($tag as $t1) {{($t->id==$t1) ? "selected":""}} @endforeach @endif >{{$t->tag}}</option>
+                    <option value="{{$t->id}}"
+                    @if($action=="update")
+                        @foreach($tag as $t1) {{($t->id==$t1) ? "selected":""}} @endforeach
+                        @endif
+                    >
+                        {{$t->tag}}
+                    </option>
                 @endforeach
             </select>
         </div>
