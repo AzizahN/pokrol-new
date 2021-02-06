@@ -48,12 +48,14 @@ class ContentForm extends Component
         $this->data['type'] = $this->type;
         $this->data['thumbnail'] = '';
         $this->data['contents'] = '';
-
+//dd($this->dataId);
         if (!!$this->dataId) {
-
             $data = Content::find($this->dataId);
+
             $ta = $data->contentTags;
             $this->tag = [];
+
+//            dd($this->tag);
             for ($i = 0; $i < count($ta); $i++) {
                 $this->tag[$i] = $ta[$i]->tag_id;
             }
@@ -139,8 +141,13 @@ class ContentForm extends Component
             'title' => 'Berhasil mengubah tulisan',
         ]);
 
-        $this->emit('redirect');
-
+        if ($this->type == 1){
+            return redirect(route('admin.blog.index'));
+        } elseif ($this->type == 2){
+            return redirect(route('admin.event.index'));
+        }else{
+            return redirect(route('admin.news.index'));
+        }
     }
 
     public function render()

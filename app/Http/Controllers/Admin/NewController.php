@@ -22,6 +22,6 @@ class NewController extends Controller
 
     public function edit($id)
     {
-        return view('pages.tausiyah.edit');
+        return view('pages.tausiyah.edit',compact('id'));
     }
 }

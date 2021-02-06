@@ -22,7 +22,7 @@ class BlogController extends Controller
 
     public function edit($id)
     {
-        return view('pages.blog.edit');
+        return view('pages.blog.edit',compact('id'));
     }
 
 }
