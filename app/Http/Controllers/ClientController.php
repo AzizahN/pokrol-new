@@ -40,5 +40,18 @@ class ClientController extends Controller
         $data=$request->all();
     }
 
+    public function postSearch(Request $request){
+//        dd($request);
+        return redirect(route('search', $request->search));
+    }
+    public function search($query){
+//        dd($query);
+        $contents = Content::where('title', 'like', '%' . $query . '%')
+            ->orWhere('contents', 'like', '%' . $query . '%')
+            ->orWhere('created_at', 'like', '%' . $query . '%')->get();
+//        dd($content);
+        return view('front.content',compact('contents'));
+    }
+
 
 }

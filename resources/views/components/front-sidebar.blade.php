@@ -1,14 +1,13 @@
 <div class="blog_right_sidebar">
     <aside class="single_sidebar_widget search_widget">
-        <form action="#">
+        <form action="{{route('post-search')}}" method="post">
             <div class="form-group">
                 <div class="input-group mb-3">
-                    <input type="text" class="form-control" placeholder='Cari Kata'
-                           onfocus="this.placeholder = ''"
-                           onblur="this.placeholder = 'Search Keyword'">
-                    <div class="input-group-append">
-                        <button class="btns" type="button"><i class="ti-search"></i></button>
-                    </div>
+                        @csrf
+                        <input type="text" name="search" class="form-control" placeholder='Cari Kata' required>
+                        <div class="input-group-append">
+                            <button class="btns" type="submit"><i class="ti-search"></i></button>
+                        </div>
                 </div>
             </div>
             <button class="button rounded-0 primary-bg text-white w-100 btn_1 boxed-btn"

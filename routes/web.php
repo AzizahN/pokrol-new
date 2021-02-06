@@ -41,8 +41,11 @@ Route::get('/tausiyah',[ClientController::class,'tausiyah'])->name('tausiyah');
 Route::get('/blog',[ClientController::class,'blog'])->name('blog');
 Route::get('/event',[ClientController::class,'event'])->name('event');
 Route::get('/about',[ClientController::class,'about'])->name('about');
-Route::get('/{slug}',[ClientController::class,'detail'])->name('detail');
-Route::post('/{id}',[CommentController::class,'store'])->name('comment-store');
+Route::get('/detail/{slug}',[ClientController::class,'detail'])->name('detail');
+Route::post('comment/{id}',[CommentController::class,'store'])->name('comment-store');
+
+Route::post('/search',[ClientController::class,'postSearch'])->name('post-search');
+Route::get('/search/{search}',[ClientController::class,'search'])->name('search');
 
 
 Route::name('admin.')->prefix('admin')->middleware(['auth:sanctum','web', 'verified'])->group(function() {
@@ -75,6 +78,9 @@ Route::name('admin.')->prefix('admin')->middleware(['auth:sanctum','web', 'verif
     Route::resource('user',UserController::class)->only(['index','create','edit']);
     Route::resource('event',EventController::class)->only(['index','create','edit']);
     Route::resource('news',NewController::class)->only(['index','create','edit']);
+
+
+
 
 });
 

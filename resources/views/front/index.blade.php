@@ -103,6 +103,7 @@
 {{--        </div>--}}
 {{--    </div>--}}
         <div class="youtube-area video-padding">
+{{--        <div class="youtube-area video-padding" style="margin-top: -90px">--}}
             <div class="container">
                 <div class="row">
                     <div class="col-12">
@@ -117,7 +118,6 @@
                     <div class="row">
                         <div class="col-lg-12">
                             <div class="video-caption">
-                                <br><br><br><br><br>
                                 <div class="bottom-caption">
                                     <h2>Welcome To The Best Model Winner Contest At Look of the year</h2>
                                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod ipsum dolor sit. Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod ipsum dolor sit. Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod ipsum dolor sit lorem ipsum dolor sit.</p>

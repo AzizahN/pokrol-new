@@ -7,7 +7,7 @@
                 <div class="col-lg-8 mb-5 mb-lg-0">
                     <div class="blog_left_sidebar">
 
-                        @foreach($contents as $c)
+                        @forelse($contents as $c)
 
                         <article class="blog_item">
                             <div class="blog_item_img">
@@ -16,17 +16,23 @@
                                     <h3>{{$c->created_at->format('d')}}</h3>
                                     <p>{{$c->created_at->format('M')}}</p>
                                 </a>
+                                <a href="#" class="blog_item_tag">
+                                    {{strtoupper($c->types->title)}}
+                                </a>
                             </div>
 
                             <div class="blog_details">
                                 <a class="d-inline-block" href="{{route('detail',$c->slug)}}">
                                     <h2>{{$c->title}}</h2>
                                 </a>
-                                @if(strlen($c->contents) > 800)
-                                    <p>{!! Str::limit($c->contents, 800, '') !!}...(<a href="{{route('detail',$c->slug)}}">Baca Selengkapnya</a>)</p>
-                                @else
-                                    <p>{{$c->contents}}</p>
-                                @endif
+                                <div class="row">
+                                    @if(strlen($c->contents) > 800)
+                                        <p>{!! Str::limit($c->contents, 800, '') !!}...(<a href="{{route('detail',$c->slug)}}">Baca Selengkapnya</a>)</p>
+                                    @else
+                                        <p>{{$c->contents}}</p>
+                                    @endif
+                                </div>
+
                                 <ul class="blog-info-link">
                                     <li><a href="#"><i class="fa fa-user"></i>
                                             -
@@ -39,8 +45,10 @@
                                 </ul>
                             </div>
                         </article>
+                        @empty
+                            Data tidak tersedia.
 
-                        @endforeach
+                        @endforelse
 
 {{--                        {{$contents->links()}}--}}
                         <nav class="blog-pagination justify-content-center d-flex">

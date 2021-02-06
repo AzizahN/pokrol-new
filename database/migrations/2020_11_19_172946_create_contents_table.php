@@ -22,7 +22,7 @@ class CreateContentsTable extends Migration
             $table->unsignedBigInteger('user_id');
             $table->string('status')->nullable();
             $table->text('note')->nullable();
-            $table->tinyInteger('type');
+            $table->unsignedBigInteger('type');
             $table->bigInteger('view')->default(0);
             $table->timestamps();
 
@@ -32,6 +32,11 @@ class CreateContentsTable extends Migration
                 ->cascadeOnDelete()
                 ->cascadeOnUpdate();
 
+            $table->foreign('type')
+                ->references('id')
+                ->on('types')
+                ->onDelete('no action')
+                ->onUpdate('no action');
         });
     }
 

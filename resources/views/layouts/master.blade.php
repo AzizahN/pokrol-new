@@ -133,46 +133,46 @@
     <!-- Header Start -->
     <div class="header-area">
         <div class="main-header ">
-            <div class="header-top black-bg d-none d-md-block">
-                <div class="container">
-                    <div class="col-xl-12">
-                        <div class="row d-flex justify-content-between align-items-center">
-                            <div class="header-info-right">
-                                <ul class="header-social">
-                                    <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                                    <li><a href="#"><i class="fab fa-instagram"></i></a></li>
-                                    <li><a href="#"><i class="fab fa-pinterest-p"></i></a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="header-mid d-none d-md-block">
-                <div class="container">
-                    <div class="row d-flex align-items-center">
-                        <!-- Logo -->
-                        <div class="col-xl-3 col-lg-3 col-md-3">
-                            <div class="logo">
-                                {{--                                <a href="index.html"><img src="{{asset('asset/icon.png')}}" alt=""></a>--}}
-                            </div>
-                        </div>
-                        <div class="col-xl-9 col-lg-9 col-md-9">
-                            <div class="header-banner f-right ">
-                                {{--                                @auth--}}
-                                {{--                                    <a href="{{ url('/dashboard') }}" class="text-sm text-gray-300 underline">Dashboard</a>--}}
-                                {{--                                @else--}}
-                                {{--                                    <a href="{{ route('login') }}" class="btn btn-outline-primary">Login</a>--}}
-                                {{--                                @endif--}}
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+{{--            <div class="header-top black-bg d-none d-md-block">--}}
+{{--                <div class="container">--}}
+{{--                    <div class="col-xl-12">--}}
+{{--                        <div class="row d-flex justify-content-between align-items-center">--}}
+{{--                            <div class="header-info-right">--}}
+{{--                                <ul class="header-social">--}}
+{{--                                    <li><a href="#"><i class="fab fa-twitter"></i></a></li>--}}
+{{--                                    <li><a href="#"><i class="fab fa-instagram"></i></a></li>--}}
+{{--                                    <li><a href="#"><i class="fab fa-pinterest-p"></i></a></li>--}}
+{{--                                </ul>--}}
+{{--                            </div>--}}
+{{--                        </div>--}}
+{{--                    </div>--}}
+{{--                </div>--}}
+{{--            </div>--}}
+{{--            <div class="header-mid d-none d-md-block">--}}
+{{--                <div class="container">--}}
+{{--                    <div class="row d-flex align-items-center">--}}
+{{--                        <!-- Logo -->--}}
+{{--                        <div class="col-xl-3 col-lg-3 col-md-3">--}}
+{{--                            <div class="logo">--}}
+{{--                                --}}{{--                                <a href="index.html"><img src="{{asset('asset/icon.png')}}" alt=""></a>--}}
+{{--                            </div>--}}
+{{--                        </div>--}}
+{{--                        <div class="col-xl-9 col-lg-9 col-md-9">--}}
+{{--                            <div class="header-banner f-right ">--}}
+{{--                                --}}{{--                                @auth--}}
+{{--                                --}}{{--                                    <a href="{{ url('/dashboard') }}" class="text-sm text-gray-300 underline">Dashboard</a>--}}
+{{--                                --}}{{--                                @else--}}
+{{--                                --}}{{--                                    <a href="{{ route('login') }}" class="btn btn-outline-primary">Login</a>--}}
+{{--                                --}}{{--                                @endif--}}
+{{--                            </div>--}}
+{{--                        </div>--}}
+{{--                    </div>--}}
+{{--                </div>--}}
+{{--            </div>--}}
             <div class="header-bottom header-sticky">
                 <div class="container">
                     <div class="row align-items-center">
-                        <div class="col-xl-10 col-lg-10 col-md-12 header-flex">
+                        <div class="col-sm-10 col-lg-10 col-md-12 header-flex">
                             <!-- sticky -->
                             <div class="sticky-logo">
                                 <a href="index.html"><img src="{{asset('asset/icon.png')}}" alt="" style="width: 65px"></a>
@@ -186,28 +186,21 @@
                                         <li><a href="{{route('tausiyah')}}">Tausiyah</a></li>
                                         <li><a href="{{route('event')}}">Event</a></li>
                                         <li><a href="{{route('about')}}">Kontak</a></li>
-                                        @auth
-                                            <li>
-                                                <a href="{{ url('/dashboard') }}">Dashboard</a>
-                                            </li>
-                                        @else
-                                            <li>
-                                                <a href="{{ route('login') }}">Login</a>
-                                            </li>
-                                        @endif
                                     </ul>
                                 </nav>
                             </div>
                         </div>
                         <div class="col-xl-2 col-lg-2 col-md-4">
                             <div class="header-right-btn f-right d-none d-lg-block">
-                                <i class="fas fa-search special-tag"></i>
-                                <div class="search-box">
-                                    <form action="#">
-                                        <input type="text" placeholder="Cari">
-
-                                    </form>
-                                </div>
+                                    @auth
+                                        <li>
+                                            <a class="btn" href="{{ url('/dashboard') }}">Dashboard</a>
+                                        </li>
+                                    @else
+                                        <li>
+                                            <a class="btn" href="{{ route('login') }}">Login</a>
+                                        </li>
+                                    @endif
                             </div>
                         </div>
                         <!-- Mobile Menu -->
@@ -252,7 +245,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6">
+                <div class="col-md-2 col-md-3 col-md-4 col-sm-6">
                     <div class="single-footer-caption">
                         <div class="footer-tittle">
                             <h4>Menu Kami</h4>

@@ -3,23 +3,22 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Database\Eloquent\Relations\BelongsTo;
-use Illuminate\Database\Eloquent\Relations\HasMany;
 
 /**
  * @property integer $id
  * @property integer $user_id
+ * @property integer $type
  * @property string $title
  * @property string $slug
  * @property string $thumbnail
  * @property string $contents
  * @property string $status
  * @property string $note
- * @property boolean $type
  * @property integer $view
  * @property string $created_at
  * @property string $updated_at
  * @property User $user
+ * @property Comment[] $comments
  * @property ContentTag[] $contentTags
  */
 class Content extends Model
@@ -34,10 +33,18 @@ class Content extends Model
     /**
      * @var array
      */
-    protected $fillable = ['user_id', 'title', 'slug', 'thumbnail', 'contents', 'status', 'note', 'type', 'view', 'created_at', 'updated_at'];
+    protected $fillable = ['user_id', 'type', 'title', 'slug', 'thumbnail', 'contents', 'status', 'note', 'view', 'created_at', 'updated_at'];
 
     /**
-     * @return BelongsTo
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
+     */
+    public function types()
+    {
+        return $this->belongsTo('App\Models\Type', 'type');
+    }
+
+    /**
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
      */
     public function user()
     {
@@ -45,7 +52,15 @@ class Content extends Model
     }
 
     /**
-     * @return HasMany
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     */
+    public function comments()
+    {
+        return $this->hasMany('App\Models\Comment');
+    }
+
+    /**
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany
      */
     public function contentTags()
     {
@@ -100,9 +115,5 @@ class Content extends Model
                     ->orWhere('contents', 'like', '%' . $query . '%')
                     ->orWhere('created_at', 'like', '%' . $query . '%');
             });
-    }
-    public function comments()
-    {
-        return $this->hasMany('App\Models\Comment');
     }
 }
